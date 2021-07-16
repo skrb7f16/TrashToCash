@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/homepage"
+    android:backgroundTint="#626670"
+    android:backgroundTintMode="multiply"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:fontFamily="@font/aldrich"
+        android:gravity="center"
+        android:text="TRASH TO CASH"
+        android:textColor="@color/white"
+        android:textSize="28sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/Signin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/aldrich"
+            android:padding="15dp"
+            android:text="Signin"
+            app:cornerRadius="5dp" />
+
+        <Button
+            android:id="@+id/Signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/aldrich"
+            android:padding="15dp"
+            android:text="Signup"
+            app:cornerRadius="5dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/signinWithGoogle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:drawableLeft="@drawable/googleg_standard_color_18"
+        android:fontFamily="@font/aldrich"
+        android:padding="15dp"
+        android:text="Signin with google"
+        app:cornerRadius="5dp" />
+
+    <Button
+        android:id="@+id/posts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/aldrich"
+        android:padding="15dp"
+        android:text="Posts"
+        app:cornerRadius="5dp" />
+
+    <Button
+        android:id="@+id/user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/aldrich"
+        android:padding="15dp"
+        android:text="User"
+        android:visibility="gone"
+        app:cornerRadius="5dp" />
+
+</LinearLayout>

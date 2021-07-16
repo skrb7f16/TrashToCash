@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Trash to Cash</string>
+    <string name="db">https://trash-to-cash-20037-default-rtdb.firebaseio.com/</string>
+</resources>

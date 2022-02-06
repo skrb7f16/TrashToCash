@@ -18,9 +18,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TrashToCash">
-        <activity android:name=".MyCreditsActivity"></activity>
+        <activity android:name=".ChatActivity"></activity>
+        <activity android:name=".MyCreditsActivity" />
         <activity android:name=".SigninActivity" />
-        <activity android:name=".SignupActivity"></activity>
+        <activity android:name=".SignupActivity" />
         <activity android:name=".UserFeedPage" />
         <activity android:name=".UserFeedListActivity" />
         <activity android:name=".FeedPage" />

@@ -26,6 +26,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.skrb7f16.trashtocash.ChatActivity;
 import com.skrb7f16.trashtocash.R;
 import com.skrb7f16.trashtocash.UserFeedPage;
 import com.skrb7f16.trashtocash.models.CreditModel;
@@ -113,6 +114,7 @@ public class RequestAdapter extends RecyclerView.Adapter<RequestAdapter.RequestV
                                     if(sendIntent.resolveActivity(context.getPackageManager()) != null){
                                         context.startActivity(sendIntent);
                                     }
+
                                 }
                             }
 
@@ -139,6 +141,19 @@ public class RequestAdapter extends RecyclerView.Adapter<RequestAdapter.RequestV
                 });
             }
         });
+        holder.chat.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+
+                Intent intent=new Intent(context.getApplicationContext(), ChatActivity.class);
+                intent.putExtra("requesterId",r.getRequesterId());
+                intent.putExtra("senderId",FirebaseAuth.getInstance().getUid());
+                intent.putExtra("productId",r.getProductId());
+                context.startActivity(intent);
+            }
+        });
+
     }
 
     @Override
@@ -148,7 +163,7 @@ public class RequestAdapter extends RecyclerView.Adapter<RequestAdapter.RequestV
 
     public class RequestViewHolder extends RecyclerView.ViewHolder {
         TextView by,msg,at;
-        Button accept,del;
+        Button accept,del,chat;
         public RequestViewHolder(@NonNull View itemView) {
             super(itemView);
             by=itemView.findViewById(R.id.requestedBy);
@@ -156,6 +171,7 @@ public class RequestAdapter extends RecyclerView.Adapter<RequestAdapter.RequestV
             at=itemView.findViewById(R.id.requestedAt);
             accept=itemView.findViewById(R.id.accept);
             del=itemView.findViewById(R.id.delete);
+            chat=itemView.findViewById(R.id.chatButton);
         }
     }
     private boolean whatsappInstalledOrNot(String uri) {

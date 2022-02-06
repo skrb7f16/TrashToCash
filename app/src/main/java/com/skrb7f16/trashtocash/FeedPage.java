@@ -5,6 +5,7 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -95,6 +96,16 @@ public class FeedPage extends AppCompatActivity {
                         binding.whatsapp.setText("");
                     }
                 });
+            }
+        });
+        binding.chatWithSender.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(FeedPage.this, ChatActivity.class);
+                intent.putExtra("requesterId",feed.getById());
+                intent.putExtra("senderId",FirebaseAuth.getInstance().getUid());
+                intent.putExtra("productId",feed.getId());
+                startActivity(intent);
             }
         });
     }

@@ -150,6 +150,8 @@ public class RequestAdapter extends RecyclerView.Adapter<RequestAdapter.RequestV
                 intent.putExtra("requesterId",r.getRequesterId());
                 intent.putExtra("senderId",FirebaseAuth.getInstance().getUid());
                 intent.putExtra("productId",r.getProductId());
+                intent.putExtra("recieverName",r.getRequesterUsername());
+                intent.putExtra("productName",r.getProductName());
                 context.startActivity(intent);
             }
         });

@@ -1,11 +1,27 @@
 package com.skrb7f16.trashtocash.models;
 
 
-
+import java.util.ArrayList;
 
 public class User {
     String userId, username;
     int totalCredits;
+    public ArrayList<String>rooms;
+
+    public ArrayList<String> getRooms() {
+        return rooms;
+    }
+
+    public void setRooms(ArrayList<String> rooms) {
+        this.rooms = rooms;
+    }
+
+    public User(String userId, String username, int totalCredits, ArrayList<String> rooms) {
+        this.userId = userId;
+        this.username = username;
+        this.totalCredits = totalCredits;
+        this.rooms = rooms;
+    }
 
     public void setUsername(String username) {
         this.username = username;

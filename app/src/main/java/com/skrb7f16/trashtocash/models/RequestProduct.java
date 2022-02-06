@@ -11,7 +11,15 @@ public class RequestProduct {
     String requestedAt;
     boolean accepted;
     String whatsappNo;
+    String productName;
 
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
 
     public String getWhatsappNo() {
         return whatsappNo;
@@ -47,6 +55,22 @@ public class RequestProduct {
         this.requestedToUsername = requestedToUsername;
         this.message = message;
     }
+
+    public RequestProduct(String requestId, String productId, String requesterId, String requestedToId, String requesterUsername, String requestedToUsername, String message, String requestedAt, boolean accepted, String whatsappNo, String productName) {
+        this.requestId = requestId;
+        this.productId = productId;
+        this.requesterId = requesterId;
+        this.requestedToId = requestedToId;
+        this.requesterUsername = requesterUsername;
+        this.requestedToUsername = requestedToUsername;
+        this.message = message;
+        this.requestedAt = requestedAt;
+        this.accepted = accepted;
+        this.whatsappNo = whatsappNo;
+        this.productName = productName;
+    }
+
+
 
     public RequestProduct() {
     }

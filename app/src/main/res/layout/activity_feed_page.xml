@@ -235,15 +235,8 @@
                     android:ems="10"
                     android:gravity="start|top"
                     android:hint="Message for provider"
-                    android:inputType="textMultiLine" />
-                <EditText
-                    android:id="@+id/whatsapp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:gravity="start|top"
-                    android:hint="Please enter your whatsapp no"
-                    android:inputType="phone" />
+                    android:inputType="textMultiLine"
+                    android:text="Hello i want to buy the product can we talk" />
 
                 <Button
                     android:id="@+id/requestBtn"
@@ -253,11 +246,6 @@
                     android:text="Request" />
             </LinearLayout>
 
-            <Button
-                android:id="@+id/chatWithSender"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Chat" />
         </LinearLayout>
     </ScrollView>
 
